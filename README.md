@@ -53,5 +53,5 @@ CREATE TABLE IF NOT EXISTS public.craig_table
 I then moved data from my local database to Snowflake using psql shell as the dataset was too large so I had copy it in parts:-
 \COPY lux_table FROM 'C:/Users/Francis Mwangi/Desktop/SNAP/Lux/Part1.csv' WITH CSV ENCODING 'ISO-8859-1' HEADER DELIMITER ',';
 
-Step 4:-
+#Step 4:-
 In here, I was to move the data from postgress to Snowflake 
