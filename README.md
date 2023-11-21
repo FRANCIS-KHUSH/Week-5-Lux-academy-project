@@ -2,8 +2,8 @@
 Using the dataset on :-https://www.kaggle.com/datasets/mbaabuharun/craigslist-vehicles copied the idea was to download the dataset, copy the data using SQL to a local MySQL or PostgreSQL database, move the data from local database to Snowflake, perform data transformation with DBT (data build tool), and use your preferred data visualization tool to create a report and dashboard.
 
  
-These are the steps that I followed to tackle the project described above:-
-Step 1:-
+#These are the steps that I followed to tackle the project described above:-
+#Step 1:-
 I first creeated database in posgress, pgAdmin :-
 CREATE DATABASE craig_db
     WITH
@@ -16,7 +16,7 @@ CREATE DATABASE craig_db
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
-    Step 2:-
+   # Step 2:-
 Then created table where the data would be stored :- 
 CREATE TABLE IF NOT EXISTS public.craig_table
 (
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS public.craig_table
     posting_date character varying COLLATE pg_catalog."default",
     removal_date character varying COLLATE pg_catalog."default"
 )
-Step 3:-
+#Step 3:-
 I then moved data from my local database to Snowflake using psql shell as the dataset was too large so I had copy it in parts:-
 \COPY lux_table FROM 'C:/Users/Francis Mwangi/Desktop/SNAP/Lux/Part1.csv' WITH CSV ENCODING 'ISO-8859-1' HEADER DELIMITER ',';
 
